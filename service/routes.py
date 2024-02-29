@@ -154,5 +154,5 @@ def check_content_type(media_type):
 
 def test_method_not_allowed(self):
     """It should not allow an illegal method call"""
-    resp = self.client.delete(BASE_URL)
+    resp = self.client.delete(BASE_URL="/accounts")
     self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
